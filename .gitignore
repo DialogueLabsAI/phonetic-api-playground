@@ -28,6 +28,9 @@ yarn-error.log*
 .env*.local
 .env
 
+# captured browser sessions (contain login cookies — never commit)
+/auth
+
 # vercel
 .vercel
 

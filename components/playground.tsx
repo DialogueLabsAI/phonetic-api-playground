@@ -5,6 +5,7 @@ import { ApiConsole } from "@/components/api-console";
 import { ResponseLog } from "@/components/response-log";
 import { FormattedDomainList } from "@/components/formatted-domain-list";
 import { StatsWidgets, LogCountBadge } from "@/components/stats-widgets";
+import { ExpiredDomainsLauncher } from "@/components/expired-domains-launcher";
 import { DEFAULT_THRESHOLDS } from "@/lib/tagging";
 import type {
   ApiCallLog,
@@ -69,6 +70,8 @@ export function Playground({ sources }: PlaygroundProps) {
 
   return (
     <div className="flex flex-col gap-6">
+      <ExpiredDomainsLauncher />
+
       <ApiConsole
         sources={sources}
         sourceId={sourceId}
